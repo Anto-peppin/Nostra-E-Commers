@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cookie&family=Nosifer&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Nosifer: "Nosifer", sans-serif;
+  --Chakra: "Chakra Petch", sans-serif;
+  --text: "Roboto", sans-serif;
+  --style: "Cookie", sans-serif;
+}
+@property --deg {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+.login {
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+  background-image: url(./image/login-bg-img.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.loginpad {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 2px solid;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.24),
+    rgba(0, 0, 0, 0.274)
+  );
+}
+
+.login_left {
+  height: 100%;
+
+  padding: 20px;
+  background-image: url(./image/login\ gif.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 5px dashed;
+  border-image: linear-gradient(rgb(7, 7, 138), green) 1;
+}
+.login_left h1 {
+  font-size: clamp(2.5em, 5vw, 30em);
+  font-family: var(--Chakra);
+  font-weight: bold;
+  color: white;
+}
+.login_left h1:nth-child(2) {
+  align-self: flex-end;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(7, 7, 7);
+}
+.login_right {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+.login_right h1 {
+  font-family: var(--Chakra);
+  font-size: clamp(2.2em, 4vw, 20em);
+  color: white;
+  text-align: center;
+}
+.login_right fieldset {
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 15px;
+  border: 2px solid white;
+}
+.login_right fieldset legend {
+  font-family: var(--Chakra);
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0 5px;
+}
+.login_right fieldset input {
+  width: 100%;
+  height: 100%;
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.login_right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login_right form .logindiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: black;
+  padding: 0 5px;
+  /* border: 2px solid; */
+}
+.login_right form button {
+  align-self: center;
+  padding: 5px 50px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: var(--Chakra);
+  cursor: pointer;
+  outline: none;
+  animation: login 2s linear infinite;
+  background-image: conic-gradient(
+    from var(--deg),
+    rgba(0, 0, 0, 0.377),
+    white
+  );
+}
+@keyframes login {
+  0% {
+    --deg: 0deg;
+  }
+  100% {
+    --deg: 360deg;
+  }
+}
+.logindiv .error {
+  color: red;
+  margin-left: 20px;
+}
+@media (max-width: 932px) {
+  .login_left {
+    display: none;
+  }
+  .loginpad {
+    grid-template-columns: 1fr;
+  }
+  .login_right {
+    justify-content: space-around;
+  }
+}
+.main {
+  width: 100%;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin-bottom: 20px;
+  background: white;
+  box-shadow: 0 2px 5px black;
+}
+
+.mainnav {
+  width: 100%;
+  padding: 5px 5%;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, white, black, white) 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.mainnav h1 {
+  font-family: var(--Chakra);
+}
+.mainnav .icons {
+  display: flex;
+  gap: 15px;
+  font-family: var(--text);
+}
+.mainnav .icons .person,
+.mainnav .icons .heart {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.person svg,
+.heart svg {
+  fill: black;
+  cursor: pointer;
+}
+.subnav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  scale: 0;
+  opacity: 0;
+  animation: nav 1s linear forwards;
+}
+@keyframes nav {
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+.subnav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 25px;
+  font-family: var(--text);
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  /* border: 1px solid; */
+}
+.subnav ul li {
+  cursor: pointer;
+  /* border: 2px solid; */
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.5s linear;
+  transform: skew(-20deg);
+  border-right: 2px solid;
+  padding: 5px;
+}
+.subnav ul li:hover {
+  border-bottom-color: black;
+}
+.home {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.027);
+  margin-bottom: 20px;
+}
+
+.home .homeinner {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 450px;
+}
+.home .homeinner .homeleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.home .homeinner .homeleft .off {
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: white;
+  font-family: var(--text);
+}
+.home .homeinner .homeleft p span {
+  font-weight: bold;
+}
+.home .homeinner .homeleft h1 {
+  font-family: var(--text);
+  font-size: clamp(2.2em, 3vw, 3em);
+}
+.home .homeinner .homeleft .mainpara {
+  color: rgba(0, 0, 0, 0.644);
+}
+.home .homeinner .homeleft button {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 2px solid;
+  padding: 5px 15px;
+  font-family: var(--text);
+  font-size: 1.2em;
+  cursor: pointer;
+  border-image: linear-gradient(120deg, red, blue) 1;
+}
+.homeright {
+  height: 100%;
+}
+.homeright img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.459));
+}
+.feature {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.feature .featureinner {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin: auto;
+}
+.feature .featureinner .featureitem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--text);
+  background-color: rgb(247,247,247);
+  border-radius: 5px;
+  padding: 5px;
+}
+.featureleft {
+  min-width: 70px;
+  max-width: 70px;
+}
+.featureleft img {
+  width: 100%;
+  object-fit: contain;
+}
+.featureright h3 {
+  margin-bottom: 5px;
+}
