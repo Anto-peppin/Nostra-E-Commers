@@ -8,7 +8,7 @@
 }
 body{
     width:100%;
-    background-color: rgba(0, 0, 255, 0.205);
+    background-color: rgba(235, 235, 235, 0.205);
     position: relative;
 }
 header{
@@ -46,6 +46,7 @@ cursor: pointer;
     padding: 15px;
     border-radius: 20px;
     margin-top: 50px;
+    margin: auto;
 
 }
 .innercontent{
