@@ -304,7 +304,7 @@ person.addEventListener('click',()=>{
     window.location.href = './MyAccount.html'
 })
 heart.addEventListener('click',()=>{
-    window.location.href = './WishList.html'
+    window.location.href = './Wishlist.html'
 })
 
 
