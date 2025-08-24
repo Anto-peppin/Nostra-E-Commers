@@ -95,9 +95,10 @@ cursor: pointer;
 
 }
 .right .title{
-    font-size: 1.8em;
+    font-size: 1.4em;
     font-weight: 600;
     color: red;
+    text-align: center;
 }
 .rate{
     display: flex;
