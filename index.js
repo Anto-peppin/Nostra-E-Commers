@@ -156,7 +156,7 @@ function checking(input){
 
 }
 
-
+ products()
 
  let viewproducts = JSON.parse(localStorage.getItem('products'));
  
