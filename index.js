@@ -218,7 +218,7 @@ function filterData(data){
         <h3>${data.category}</h3>
         <div class='pay'>
         <p>$${Math.floor(data.price)}</p>
-        <button class='get-btn' onclick='detail(${index})'>Get full Detail<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="white"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></button>
+        <button class='get-btn' onclick='detail(${data.id-1})'>Get full Detail<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="white"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg></button>
         </div>
     </div>
 
