@@ -24,10 +24,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  /* overflow: hidden; */
 }
 .loginpad {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   width: 100%;
-  height: 100%;
+  height: fit-content;
   margin: auto;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -116,7 +120,7 @@
 }
 .login_right form button {
   align-self: center;
-  padding: 5px 50px;
+  padding: 10px 50px;
   border-radius: 5px;
   border: none;
   font-size: 1.3em;
@@ -127,7 +131,7 @@
   animation: login 2s linear infinite;
   background-image: conic-gradient(
     from var(--deg),
-    rgba(0, 0, 0, 0.377),
+    rgba(228, 222, 222, 0.377),
     white
   );
 }
@@ -451,13 +455,13 @@ a{
 .womentext h2 {
   font-family: var(--Chakra);
   font-size: 3em;
-  -webkit-text-stroke: 2px rgba(8, 8, 8, 0.678);
-  color: transparent;
+  /* -webkit-text-stroke: 2px rgba(8, 8, 8, 0.678); */
+  color: black;
 }
 
 .womentext p {
   font-weight: 500;
-  color: rgb(0, 0, 0);
+  color: rgba(255, 115, 0, 0.829);
 }
 .womentext h5 {
   justify-self: start;
@@ -510,6 +514,9 @@ a{
 .mentext h4 {
   color: blue;
 }
+.mentext p{
+   color: rgba(255, 115, 0, 0.829);
+}
 .accestext button,
 .mentext button {
   align-self: flex-start;
@@ -521,6 +528,9 @@ a{
   border-radius: 10px;
   border: none;
   outline: none;
+}
+.accestext p{
+   color: rgba(255, 115, 0, 0.829);
 }
 .colwatch {
   grid-area: c;
@@ -697,7 +707,7 @@ a{
   background-color: blue;
   cursor: pointer;
   color: white;
-  padding: 2px 5px;
+  padding: 5px 10px;
   border: none;
   border-radius: 10px;
   font-size: 14px;
@@ -904,10 +914,15 @@ footer .innerfooter .footertop ul p{
     width: 100%;
     height: 100%;
     filter: blur(2px);
-  filter: brightness(70%);
+  filter: brightness(50%);
     left: 0;
     top: 0;
+   border-radius: 10px;
+
   }
+   .home .homeinner .homeleft{
+    border-radius: 10px;
+   }
   .home .homeinner .homeleft h1{
   color: white;
  
@@ -947,7 +962,7 @@ footer .innerfooter .footertop ul p{
 }
 @media (max-width:588px){
   .innerfilterpart ul li{
-    font-size: 14px;
+    font-size: 12px;
   }
   .innerfilterpart ul{
     gap: 0px;
@@ -974,7 +989,7 @@ display: none;
 }
 @media (max-width:423px){
   .homeleft .name{
-    font-size: 2em;
+    font-size: 1.8em;
     
   }
 }

@@ -14,12 +14,15 @@ header {
   font-family: var(--Chakra);
   margin-top: 15px;
   align-items: center;
+  border-bottom: 2px dashed;
+  padding-bottom: 20px;
+  border-image: linear-gradient(to right,red,blue,green)1;
 }
 header button {
   display: flex;
   gap: 5px;
   align-items: center;
-  padding: 5px 10px;
+  padding: 10px 20px;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -79,7 +82,7 @@ header button {
   justify-content: space-between;
 }
 .fildata button {
-  padding: 5px 8px;
+  padding: 10px 20px;
   border: none;
   background-color: blue;
   color: white;
