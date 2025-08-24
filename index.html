@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js" defer></script>
     <link rel="icon" href="./image/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-------- login ------->
@@ -77,24 +78,39 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2854C5"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
                     <p>My Wishlist</p>
                 </div>
+                <div class="menu">
+                    <svg class="menubar" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M240-160q-33 0-56.5-23.5T160-240q0-33 23.5-56.5T240-320q33 0 56.5 23.5T320-240q0 33-23.5 56.5T240-160Zm240 0q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm240 0q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160ZM240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400ZM240-640q-33 0-56.5-23.5T160-720q0-33 23.5-56.5T240-800q33 0 56.5 23.5T320-720q0 33-23.5 56.5T240-640Zm240 0q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Zm240 0q-33 0-56.5-23.5T640-720q0-33 23.5-56.5T720-800q33 0 56.5 23.5T800-720q0 33-23.5 56.5T720-640Z"/></svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                    <div class="extranav">
+            <ul>
+               <li style="--position:1"><a href="#homu">Home</a></li>
+                <li style="--position:2"><a href="#newArrival">New Arrival</a></li>
+                <li style="--position:3"><a href="#want">Most Wanted</a></li>
+                <li style="--position:4"><a href="#filter">Collections</a></li>
+            </ul>
+        </div>
+
+                </div>
+
             </div>
         </div>
         <div class="subnav">
             <ul>
-                <li>Home</li>
-                <li>New Arrival</li>
-                <li>Most Wanted</li>
-                <li>Collections</li>
+                <li><a href="#homu">Home</a></li>
+                <li><a href="#newArrival">New Arrival</a></li>
+                <li><a href="#want">Most Wanted</a></li>
+                <li><a href="#filter">Collections</a></li>
             </ul>
         </div>
 
      </nav>
     
 <!-------------- home---------- -->
-    <div class="home">
+    <div class="home" id="homu">
         <div class="homeinner">
             <div class="homeleft">
-            
+
+            <h2 class="name"></h2>
                 <p class="off"><span>50% OFF</span> Summer Super Sale</p>
           
             <h1>
@@ -107,8 +123,10 @@
 
         </div>
         <div class="homeright">
-            <img src="./image/model.png" alt="">
+            <img src="./image/girl1.png" alt="">
         </div>
+         <video class="bgvido" loop muted autoplay src="./image/bg-video.mp4"></video>
+
         </div>
 
     </div>
@@ -146,8 +164,140 @@
            
         </div>
     </div>
+<!---------------- collection------------- -->
+<h1 class="arrival" id="newArrival">New Arrivals</h1>
+    <div class="collection">
+        <div class="innercollection">
+            <div class="col-women">
+                
+                <div class="womentext">
+                    <h4>New Arrivals</h4>
+                    <h5>1500+ Items</h5>
+                    <h2>Women's Style</h2>
+                    <p>Up to 70% off</p>
+                    <button>Shop Now <span><img src="./image/basket.gif" alt=""></span></button>
+                </div>
+            </div>
+            <div class="colmen">
+                <div class="mentext">
+                    
+                    <h4>New Arrivals</h4>
+                    <h2>Men's Style</h2>
+                    <p>Up to 60% off</p>
+                    <button>Shop Now <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M400-280v-400l200 200-200 200Z"/></svg>
+                    </span></button>
 
+                </div>
+
+            </div>
+            <div class="colwatch">
+                <div class="watchtext mentext">
+                    <div class="watchimg">
+                        <img src="./image/watch1.png" alt="">
+                    </div>
+                    <h4>New Arrivals</h4>
+                    <h2>Watch</h2>
+                    <p>Up to 20% off</p>
+                    <button>Shop Now <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M400-280v-400l200 200-200 200Z"/></svg>
+                    </span></button>
+
+                </div>
+
+            </div>
+            <div class="colaccessories">
+                 <div class="accestext">
+                    <div class="accesimg">
+                        <img src="./image/show.jpg" alt="">
+                    </div>
+                    <h4>New Arrivals</h4>
+                    <h2>accessories</h2>
+                    <p>Up to 50% off</p>
+                    <button>Shop Now 
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M400-280v-400l200 200-200 200Z"/></svg>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- most wanted -->
+
+   <div class="wanted" id="want">
+    <h1 class="wantedh1">Most Wanted</h1>
+    <div class="innerWanted" style="--width:180px;--total:20; --time:30">
+        <div class="scroolitem">
+       
+
+        </div>
+
+    </div>
     
+
+   </div>
+
+   <!---------------- company--------- -->
+<div class="brands">
+    <div class="innerbrand">
+        <h1 >Brands</h1>
+        <img src="./image/company logos.jfif" alt="">
+    </div>
+</div>
+
+<!----------------- filter------------- -->
+
+<div class="filterPart" id="filter">
+    <div class="innerfilterpart">
+        <h1>Collections</h1>
+        <ul>
+            <li class="allData">Men's clothing</li>
+            <li class="allData">Jewelery</li>
+            <li class="allData">Electronics</li>
+            <li class="allData">Women's clothing</li>
+        </ul>
+        <div class="filtercollection">
+
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="innerfooter">
+        <div class="footertop">
+            <ul>
+            <h1>NOSTRA</h1>
+            <p>Best E-commerse Website</p>
+        </ul>
+        <ul>
+            <li>Home</li>
+            <li>New Arrival</li>
+            <li>Most Wanted</li>
+            <li>Collections</li>
+        </ul>
+        <ul>
+          <li>My Account</li>
+          <li>My wishlist</li>
+          <li>Careers</li>
+        </ul>
+        </div>
+        <div class="footerbottom">
+            <div class="lings">
+                <span><i class="fa-brands fa-youtube"></i></span>
+                <span><i class="fa-brands fa-facebook"></i></span>
+                <span><i class="fa-brands fa-x-twitter"></i></span>
+                <span><i class="fa-solid fa-envelope"></i></span>
+                <span><i class="fa-brands fa-linkedin"></i></span>
+            </div>
+            <div class="deleloper">
+                <p>Develped by Anto peppin 😎</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+           
     </div>
 
     
