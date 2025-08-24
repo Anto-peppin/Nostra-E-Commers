@@ -72,23 +72,44 @@ function login(e){
 //          main.style.display = 'none'
 //      }
 
+// if (localStorage.getItem('mylogin') === '1') {
+//     loginDiv.style.display = 'none';
+//     main.style.display = 'inline-block';
+
+//     let userData = JSON.parse(localStorage.getItem('user'));
+//     if (userData && userData.length > 0) {
+//         let storeName = userData[0];
+//         let finalName =
+//             String(storeName).trim().slice(0, 1).toUpperCase() +
+//             storeName.trim().slice(1).toLowerCase();
+
+//         uName.innerHTML = `Hi ${finalName} 💝`;
+//     }
+// } else if (localStorage.getItem('mylogin') === '0') {
+//     loginDiv.style.display = 'inline-block';
+//     main.style.display = 'none';
+// }
+
+
 if (localStorage.getItem('mylogin') === '1') {
     loginDiv.style.display = 'none';
     main.style.display = 'inline-block';
 
-    let userData = JSON.parse(localStorage.getItem('user'));
-    if (userData && userData.length > 0) {
+    let userData = JSON.parse(localStorage.getItem('user')) || [];
+    if (userData.length > 0) {
         let storeName = userData[0];
-        let finalName =
-            String(storeName).trim().slice(0, 1).toUpperCase() +
-            storeName.trim().slice(1).toLowerCase();
+        let finalName = String(storeName).trim().slice(0, 1).toUpperCase() +
+                        storeName.trim().slice(1).toLowerCase();
 
         uName.innerHTML = `Hi ${finalName} 💝`;
+    } else {
+        uName.innerHTML = `Hi Guest 💝`; // fallback name
     }
-} else if (localStorage.getItem('mylogin') === '0') {
+} else {
     loginDiv.style.display = 'inline-block';
     main.style.display = 'none';
 }
+
 
 function checking(input){
 
