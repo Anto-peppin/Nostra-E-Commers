@@ -238,7 +238,7 @@ let data2 = JSON.parse(localStorage.getItem('details'))
 data2.length = 0
 data2.push(viewproducts[val])
 localStorage.setItem('details',JSON.stringify(data2))
-console.log(data2);
+window.location.href = './fulldetails.html'
 
 
 }
