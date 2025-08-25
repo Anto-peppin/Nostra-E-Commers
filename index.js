@@ -10,6 +10,9 @@ let extranav = document.querySelector('.extranav')
 let closebut = document.querySelector('.close')
 let person = document.querySelector('.person')
 let heart = document.querySelector('.heart')
+let shopbutton = document.querySelector('.shopbutton')
+let body = document.querySelector('body')
+let colbut = document.querySelectorAll('.colbut')
 
 
 if(localStorage.getItem('mylogin') == null){
@@ -192,6 +195,11 @@ function getbtn(val){
 let data1 = JSON.parse(localStorage.getItem('wishList'))
 data1.push(viewproducts[val])
 localStorage.setItem('wishList',JSON.stringify(data1))
+  let con = document.createElement('div')
+    con.classList.add('wishpop')
+    body.appendChild(con)
+    con.innerHTML = 'wishlist item was added successfully 💝'
+    con.style.position = 'fixed'
 
 }
 
@@ -267,6 +275,23 @@ person.addEventListener('click',()=>{
 heart.addEventListener('click',()=>{
     window.location.href = './Wishlist.html'
 })
+shopbutton.addEventListener('click',()=>{
+   popup()
+
+})
+colbut.forEach(but=>{
+    but.addEventListener('click',()=>{
+popup()
+    })
+})
+
+function popup(){
+     let con = document.createElement('div')
+    con.classList.add('shoppop')
+    body.appendChild(con)
+    con.innerHTML = 'Shop section has not been added yet'
+    con.style.position = 'fixed'
+}
 
 
 

@@ -1018,3 +1018,32 @@ display: none;
 
 
 }
+.shoppop,.wishpop{
+  width:fit-content;
+  padding:10px 20px;
+  background-color: red;
+  z-index: 1000;
+  top: 50px;
+  right: -100%;
+  border-radius: 5px;
+  color: white;
+  font-family: var(--text);
+  animation: pop 2s linear forwards;
+
+}
+.wishpop{
+  background-color: green;
+}
+@keyframes pop{
+  0%{
+ right: -100%;
+  }
+  20%,80%{
+    right: 0;
+
+  }
+  100%{
+right: -100%;
+display: none;
+  }
+}
